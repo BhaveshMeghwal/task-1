@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+.page-selection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  
+  width: 300px;
+  box-shadow: 0px 8px 15px 0px #1414141F;
+
+box-shadow: 0px 0px 4px 0px #1414141A;
+
 }
 
-.App-link {
-  color: #61dafb;
+.select-all-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align checkbox to the right */
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px 0px 8px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pages-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgba(120, 120, 120, 0.5);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.5);
+  padding: 8px 0 8px 0;
+}
+
+.page-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 0px 8px 0px;
+}
+
+.select-all-label input[type="checkbox"], .select-all-label input[type="checkbox"]:focus, .page-label input[type="checkbox"],
+.page-label input[type="checkbox"]:focus {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.page-label input[type="checkbox"]:checked, .select-all-label input[type="checkbox"]:checked{
+  background-color: #2469F6;
+  border-color: #2469F6;
+}
+
+.page-label input[type="checkbox"]:checked::before, .select-all-label input[type="checkbox"]:checked::before {
+  content: '\2713'; /* Checkmark symbol */
+  display: block;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  color: #fff; /* White color */
+}
+
+.done-button {
+  background-color: #FFCE22; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.done-button:hover {
+  background-color: #FFD84D;
 }
